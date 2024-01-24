@@ -62,10 +62,10 @@
     <section class="image-container"></section>
 
     <script>
-        document.getElementById('contactBtn').addEventListener('click', function(event) {
-            event.preventDefault();
-            document.getElementById('dropdownMenu').style.display = 'block';
-        });
+    document.getElementById('contactBtn').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('dropdownMenu').style.display = 'block';
+    });
 
         window.onclick = function(event) {
     if (!event.target.matches('#contactBtn')) {
@@ -78,6 +78,10 @@
             }
         }
     };
+
+    document.getElementById('dropdownMenu').addEventListener('click', function(event) {
+    event.stopPropagation();
+});
 
     document.querySelector('.nav-toggle').addEventListener('click', function() {
     this.classList.toggle('active');

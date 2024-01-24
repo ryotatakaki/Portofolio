@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryota Takaki's Portfolio</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div class="background-video-container">
+        <video autoplay loop muted class="background-video">
+            <source src="assets/videos/hello_world.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        
+        <nav class="navbar">
+            <a href="docs/Resume_RyotaTakaki.pdf" download="docs/Resume_RyotaTakaki.pdf" target="_blank">Resume</a>
+            <a href="https://github.com/ryotatakaki" target="_blank">Works</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+
+    <section class="home">
+        <div class="home-content">
+            <h3>Hi, I am</h3>
+            <h1>RYOTA TAKAKI</h1>
+            <p>I am a passionate developer with some experience</p>
+            <div class="btn-box">
+                <div class="btn-box">
+                    <a href="docs/Resume_RyotaTakaki.pdf" target="_blank">Download CV</a>
+                </div>
+                <div class="dropdown">
+                        <a href="#" id="contactBtn" class="contactBtn">Contact Me</a>
+                        <div id="dropdownMenu" class="dropdown-content">
+                        <a href="tel:0401173839">Call Me</a>
+                        <a href="mailto:ryota.takaki44@gmail.com?subject=Portfolio Inquiry&body=Hi Ryota,">Email Me</a>
+                        <a href="https://www.linkedin.com/in/ryota-takaki-4660551b1" target="_blank">LinkedIn</a>
+                </div>
+            </div>    
+        </div>
+
+        <div class="home-sci">
+            <a href="https://www.linkedin.com/in/ryota-takaki-4660551b1" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+            <a href="https://github.com/ryotatakaki" target="_blank"><i class='bx bxl-github'></i></a>
+        </div>
+    </section>
+
+    <section class="image-container"></section>
+
+    <script>
+        document.getElementById('contactBtn').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('dropdownMenu').style.display = 'block';
+        });
+
+        window.onclick = function(event) {
+    if (!event.target.matches('#contactBtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.style.display === 'block') {
+                    openDropdown.style.display = 'none';
+                }
+            }
+        }
+    };
+
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector('.navbar').classList.toggle('active');
+});
+
+
+
+    </script>
+</body>

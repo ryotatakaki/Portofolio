@@ -1,0 +1,82 @@
+@import url();
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+}
+
+.about {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-photo {
+    width: 150px; /* 幅を150pxに設定 */
+    height: auto; /* 高さを自動調整してアスペクト比を維持 */
+    border-radius: 30%;
+    margin: 20px auto;
+    display: block;
+    object-fit: cover; /* コンテナに合わせて画像をトリミング */
+}
+
+
+.about-content, .skills, .experience, .education {
+    margin-bottom: 20px;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills ul li {
+    background: #e2e2e2;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.about h2 {
+    color:darkblue; /* タイトルの色を変更 */
+    margin-bottom: 10px; /* タイトルの下の余白を設定 */
+}
+
+.about p {
+    font-size: 1.1em; /* テキストのフォントサイズを少し大きく */
+    color: #555; /* テキストの色を少し暗めに */
+    line-height: 1.8; /* 行間を広めに設定 */
+}
+
+.about i {
+    margin-right: 5px; /* アイコンとテキストの間の余白を設定 */
+    color: darkblue; /* アイコンの色を変更 */
+}
+
+.back-home {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.back-home-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-home-btn:hover {
+    background-color: cyan;
+}

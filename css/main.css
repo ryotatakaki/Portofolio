@@ -1,0 +1,261 @@
+@import url();
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background: #081b29;
+    color: aliceblue;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: transparent;
+}
+
+.logo {
+    font-size: 25px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover {
+    color:cyan;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+}
+
+.hamburger {
+    width: 25px;
+    height: 2px;
+    background: aliceblue;
+    display: block;
+    position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: aliceblue;
+    left: 0;
+    transition: all 0.3s;
+}
+
+.hamburger::before { top: -8px; }
+.hamburger::after { top: 8px; }
+
+
+.home {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start; /* コンテンツを左側に配置 */
+    align-items: center;
+    padding-left: 10%; /* 左側に余白を追加 */
+    width: 50vw; /* 画面幅の50%を使用 */
+}
+
+.home-content {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column; /* 縦方向にアイテムを整列 */
+    align-items: flex-start; /* 左揃えにする */
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: cyan;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #e2e2e2;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+    color: #e2e2e2;
+}
+
+.home-content .btn-box{
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.btn-box {
+    display: inline-block;
+    position: relative; /* ドロップダウンの位置の基準点 */
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: cyan;
+    border: 2px solid cyan;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: cyan;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: black;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid cyan;
+    border-radius: 50%;
+    font-size: 20px;
+    color: cyan;
+    text-decoration: none;
+    z-index: 1;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.home-sci a:hover {
+    color: black;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:cyan;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover:before {
+    width: 100%;
+}
+
+/* 新しい画像クラス */
+.image-container {
+    position: fixed;
+    top: 50%; /* 画面の垂直中心 */
+    right: 0;
+    transform: translateY(-50%); /* Y軸に沿って50%移動して中心に配置 */
+    background: url('../assets/images/memoji_pc2.png') no-repeat;
+    background-position: center; /* 画像をコンテナの中心に配置 */
+    background-size: 60%; /* 画像のサイズをコンテナの50%に設定 */
+    width: 50vw; /* コンテナの幅を画面幅の50%に設定 */
+    height: 100vh; /* コンテナの高さを画面の高さに設定 */
+    transition: background-image 0.5s;
+    z-index: 10;
+}
+
+.image-container:hover {
+    background-image: url('../assets/images/memoji_hi2.png') ;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: auto; /* ボタンの下に配置 */
+    top: 100%; /* ボタンの下に配置 */
+    width: 50%;
+    margin-top: 5px; /* ボタンとの間隔 */
+    border-radius: 4px; /* 角の丸み */
+    overflow: hidden; /* 枠内に収める */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 15px; /* パディングの調整 */
+    text-decoration: none;
+    display: block;
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -100;
+    object-fit: cover;
+    opacity: 0.3; /* 透明度の調整 */
+  }
+  

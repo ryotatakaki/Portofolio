@@ -1,0 +1,100 @@
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 5%; /* ヘッダーのパディングを調整 */
+    }
+
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+        position: fixed; /* メニューボタンを固定位置にします */
+        right: 20px; /* 右端から20pxの位置に */
+        top: 20px; /* 上端から20pxの位置に */
+        z-index: 1000; /* 他の要素の上に表示されるように */
+    }
+
+    .navbar {
+        visibility: hidden; /* 初期状態ではメニューを見えなくします */
+        opacity: 0; /* 初期状態ではメニューを透明にします */
+        position: fixed;
+        right: 20px; /* メニューボタンの右端から20pxの位置に */
+        top: 60px; /* メニューボタンの下に */
+        flex-direction: column;
+        align-items: flex-start;
+        background: #081b29;
+        padding: 20px;
+        border-radius: 8px; /* 角を丸くします */
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        transition: opacity 0.5s, visibility 0.5s; /* 透明度と表示状態の変化を0.5秒かけて適用します */
+        z-index: 999;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+        display: block; /* リンクをブロック要素にします */
+    }
+
+    .navbar.active {
+        visibility: visible; /* メニューを見えるようにします */
+        opacity: 1; /* メニューを不透明にします */
+    }
+
+    .home {
+        flex-direction: column; /* 縦方向の配置に変更 */
+        justify-content: center; /* 中央揃えに変更 */
+        padding-left: 5%; /* 左の余白を調整 */
+        width: 100%; /* 幅を100%に変更 */
+    }
+
+    .home-content {
+        align-items: center; /* 中央揃えに変更 */
+        text-align: center; /* テキストを中央揃えに変更 */
+    }
+
+    .home-content {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px; /* ボタン上部の余白を20pxに設定 */
+        margin-bottom: 20px;
+    }
+
+    .home-content .btn-box {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px; /* ボタン上部の余白を20pxに設定 */
+        margin-bottom: 20px;
+    }
+
+    .dropdown-content {
+        width: 100%; /* ドロップダウンの幅を100%に変更 */
+    }
+
+    .image-container {
+        position: static; /* 固定位置を解除 */
+        transform: none; /* 変形を解除 */
+        width: 100%; /* 幅を100%に変更 */
+        height: auto; /* 高さを自動に変更 */
+        background-size: contain; /* 画像がコンテナに収まるように調整 */
+    }
+
+    .home-sci {
+        position: static; /* 固定位置を解除 */
+        width: 100%; /* 幅を100%に変更 */
+        justify-content: center; /* 中央揃えに変更 */
+        margin-top: 30px; /* 上の余白を追加 */
+        margin-bottom: 50px;
+        order: -1; /* ボタンより上に表示 */
+    }
+
+    .background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -100;
+        object-fit: cover;
+        opacity: 0.3; /* 透明度の調整 */
+      }
+    
+}
+
